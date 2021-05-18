@@ -1,0 +1,26 @@
+[
+  {
+    "quantity": 1,
+    "name": "imported bottle of perfume",
+    "price": 270.99,
+    "category" : "leisure"
+  },
+  {
+    "quantity": 1,
+    "name": "bottle of perfume",
+    "price": 180.99,
+    "category" : "leisure"
+  },
+  {
+    "quantity": 1,
+    "name": "packet of headache pills",
+    "price": 19.75,
+    "category" : "medical"
+  },
+  {
+    "quantity": 1,
+    "name": "box of imported chocolates",
+    "price": 210.25,
+    "category" : "food"
+  }
+]
