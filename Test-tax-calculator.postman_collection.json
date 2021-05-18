@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "996a3c7b-21f7-4a88-8bee-580c13f613c2",
+		"name": "Test-tax-calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HC",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8085/calculate/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"calculate",
+						"health"
+					]
+				},
+				"description": "Updated"
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Tax",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"quantity\": 1,\n    \"name\": \"imported bottle of perfume\",\n    \"price\": 270.99,\n    \"category\" : \"leisure\"\n  },\n  {\n    \"quantity\": 1,\n    \"name\": \"bottle of perfume\",\n    \"price\": 180.99,\n    \"category\" : \"leisure\"\n  },\n  {\n    \"quantity\": 1,\n    \"name\": \"packet of headache pills\",\n    \"price\": 19.75,\n    \"category\" : \"medical\"\n  },\n  {\n    \"quantity\": 1,\n    \"name\": \"box of imported chocolates\",\n    \"price\": 210.25,\n    \"category\" : \"food\"\n  }\n]\n"
+				},
+				"url": {
+					"raw": "http://localhost:8085/calculate/tax-on-goods",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"calculate",
+						"tax-on-goods"
+					]
+				},
+				"description": "Updated"
+			},
+			"response": []
+		}
+	]
+}
