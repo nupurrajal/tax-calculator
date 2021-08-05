@@ -53,12 +53,12 @@ public class TaxService {
                         exemptedPrice = price * 1.15;
                 }
                 double currTax = exemptedPrice - price;
-                totalTax += currTax;
+                totalTax += (double) Math.round(currTax * 100.0) / 100.0;
                 response.put(String.valueOf(quantity) + " " + goodName, (double) Math.round(exemptedPrice * 100.0) / 100.0);
-                totalCost += exemptedPrice;
+                totalCost += (double) Math.round(exemptedPrice * 100.0) / 100.0;
             }
-            response.put("Tax", (double) Math.round(totalTax * 100.0) / 100.0);
-            response.put("Total", (double) Math.round(totalCost * 100.0) / 100.0);
+            response.put("Tax", totalTax);
+            response.put("Total", totalCost);
             return response;
         } catch (NumberFormatException e) {
             throw new NumberFormatException("Invalid Quantity / Price: " + e.getMessage());
